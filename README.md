@@ -1,2 +1,11 @@
-# programming-practice
-Miscellaneous programming assignments
+## Bioinformatics
+
+todo
+
+## Process Scheduler
+
+todo
+
+## Animal Decision Tree
+
+todo
