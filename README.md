@@ -2,18 +2,14 @@
 
 #### Longest Common Subsequence Between Two DNA Strings
 
+![alt text](https://github.com/AustinMoninger/programming-practice-2017/blob/master/images/Sequence.png)
+
 A common problem in molecular biology is that of sequence alignment. Given DNA
 sequences from two different organisms, biologists often want to match up similar portions of
 those sequences in order to focus on the portions that are different. Such alignment helps
 biologists determine which bases in the sequence would need to be changed in order to
 transform one into another, which then allows biologists to assess how closely related two
 different organisms are.
-
-DNAsequence1 = A**CG**G**TGT**
-
-DNAsequence2 = **CGT**TC**G**GC**T**A
-
-longestCommonSubsequence = 5 (**CGTGT**)
 
 #### Minimal Energy Folding of an RNA String
 
@@ -23,11 +19,17 @@ shape that is in a minimal energy state. This simply means that a maximal number
 pairings occur (any unpaired bases in the string increase its overall energy). However, there are
 geometric constraints on which bases can pair off.
 
+
 ## Process Scheduler
 
-todo
+![alt text](https://github.com/AustinMoninger/programming-practice-2017/blob/master/images/Scheduler.png)
+
+Program that simulates a process scheduler for a system with a single processor; outputs when and for how long each process is using the processor.
+
 
 ## Animal Decision Tree
+
+![alt text](https://github.com/AustinMoninger/programming-practice-2017/blob/master/images/DecisionTree.png)
 
 This decision tree can be used for an animal guessing game. The user first thinks of an animal, such as a horse, and then answers the questions in the tree: Is a horse a mammal? Yes, so go down the right branch. Does a horse have four legs? Yes, so go down the right branch. Does a horse have claws? No, so go down the left branch. Is the animal a horse? Indeed it is! The program has correctly identified the animal, and would be able to do so for tigers, dolphins, ants, and spiders as well.
 
