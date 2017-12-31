@@ -14,9 +14,11 @@ different organisms are.
 
 ## Animal Decision Tree
 
+This decision tree can be used for an animal guessing game. The user first thinks of an animal, such as a horse, and then answers the questions in the tree: Is a horse a mammal? Yes, so go down the right branch. Does a horse have four legs? Yes, so go down the right branch. Does a horse have claws? No, so go down the left branch. Is the animal a horse? Indeed it is! The program has correctly identified the animal, and would be able to do so for tigers, dolphins, ants, and spiders as well.
+
+
 ![alt text](https://github.com/AustinMoninger/programming-practice-2017/blob/master/images/DecisionTree.png)
 
-This decision tree can be used for an animal guessing game. The user first thinks of an animal, such as a horse, and then answers the questions in the tree: Is a horse a mammal? Yes, so go down the right branch. Does a horse have four legs? Yes, so go down the right branch. Does a horse have claws? No, so go down the left branch. Is the animal a horse? Indeed it is! The program has correctly identified the animal, and would be able to do so for tigers, dolphins, ants, and spiders as well.
 
 Of course, there are more animals than the small set defined in this tree, so the program learns from the user whenever a final answer is reached that is incorrect. For example, if the animal I had in mind were a honey bee, then I would say no to the animal being a mammal, yes to it being an insect, then no to it being an ant. At this point, the program should ask me to provide a yes-or-no question that would allow it to distinguish an ant from a honey bee. I could type, “Is the animal a pollinator?”, and then indicate that honey bees are pollinators but ants are not. The program would incorporate this information into the tree, so that it would get this answer right the next time it comes up. Thus, the program builds a large knowledge base to load from at the start of each run.
 
