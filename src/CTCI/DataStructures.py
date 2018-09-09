@@ -1,4 +1,4 @@
-class Node(object):
+class LinkedNode:
     def __init__(self, val, next=None):
         self.val = val
         self.next = next
@@ -19,7 +19,7 @@ class Node(object):
         return str(self.val)
 
 
-class LinkedList(object):
+class LinkedList:
     def __init__(self, head=None):
         self.head = head
 
@@ -31,22 +31,22 @@ class LinkedList(object):
 
     def insert_at_head(self, val):
         if not self.head:
-            self.head = Node(val)
+            self.head = LinkedNode(val)
             return
 
-        new_node = Node(val)
+        new_node = LinkedNode(val)
         new_node.set_next(head)
         head = new_node
 
     def insert_at_tail(self, val):
         if not self.head:
-            self.head = Node(val)
+            self.head = LinkedNode(val)
             return
 
         node = self.head
         while(node.get_next() != None):
             node = node.get_next()
-        node.next = Node(val)
+        node.next = LinkedNode(val)
 
     def size(self):
         size = 0
@@ -92,31 +92,43 @@ class LinkedList(object):
 
 
 
+class TreeNode:
+    def __init__(self, data, left=None, right=None):
+        self.data = data
+        self.left = left
+        self.right = right
 
-# print 'hi'
-li = LinkedList()
-li.insert_at_tail(1)
-li.insert_at_tail(10)
-li.insert_at_tail(5)
-# print li
-# print li.size()
-# print li.search(5)
-# print li.search(0)
-#
-# node = Node(9)
-# print node.next
-print li
+    def preorder(self):
+        print self.data
+        if self.left:
+            self.left.preorder()
+        if self.right:
+            self.right.preorder()
 
-li.delete_value(10)
+    def inorder(self):
+        if self.left:
+            self.left.inorder()
+        print self.data
+        if self.right:
+            self.right.inorder()
 
-print li
-li.insert_at_tail(7)
-li.insert_at_tail(67)
+    def postorder(self):
+        if self.left:
+            self.left.postorder()
+        if self.right:
+            self.right.postorder()
+        print self.data
 
-li.insert_at_tail(8)
-print li
 
-li.delete_value(8)
-print li
-li.delete_value(1)
-print li
+
+
+
+tree = TreeNode(1)
+tree.left = TreeNode(2)
+tree.right = TreeNode(3)
+tree.left.left = TreeNode(4)
+tree.left.right = TreeNode(5)
+tree.right.left = TreeNode(6)
+tree.right.right = TreeNode(7)
+
+tree.postorder()
