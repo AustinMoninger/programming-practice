@@ -153,7 +153,33 @@ def get_isolated_nodes(graph):
 """
 Stack stuff
 """
+class Stack:
+    def __init__(self):
+        self.items = []
 
+    def is_empty(self):
+        return self.items == []
+
+    def push(self, data):
+        self.items.append(data)
+
+    def pop(self):
+        return self.items.remove(self.items[len(self.items) - 1])
+
+    def size(self):
+        return len(self.items)
+
+    def __str__(self):
+        return str(self.items)
+
+
+# s = Stack()
+# s.push(1)
+# s.push(3)
+# s.push(10)
+# print s
+# s.pop()
+# print s
 
 """
 Queue stuff
