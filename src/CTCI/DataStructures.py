@@ -94,6 +94,38 @@ class LinkedList:
         result += "]"
         return result
 
+
+"""
+Queue stuff
+"""
+class Queue:
+    def __init__(self):
+        self.items = []
+
+    def is_empty(self):
+        return self.items == []
+
+    def enqueue(self, data):
+        self.items.append(data)
+
+    def dequeue(self):
+        return self.items.pop(0)
+
+    def size(self):
+        return len(self.items)
+
+    def __str__(self):
+        return str(self.items)
+
+# s = Queue()
+# s.enqueue(1)
+# s.enqueue(3)
+# s.enqueue(10)
+# print s
+# s.dequeue()
+# print s
+
+
 """
 Tree stuff
 """
@@ -123,6 +155,29 @@ class TreeNode:
         if self.right:
             self.right.postorder()
         print self.data
+
+    def levelorder(self):
+        q = Queue()
+        if not self:
+            return
+        q.enqueue(self)
+        while not q.is_empty():
+            node = q.dequeue()
+            print str(node) + ' '
+            if node.left:
+                q.enqueue(node.left)
+            if node.right:
+                q.enqueue(node.right)
+
+    def __str__(self):
+        return str(self.data)
+
+# t = TreeNode(1)
+# t.left = TreeNode(2)
+# t.right = TreeNode(3)
+# t.left.left = TreeNode(4)
+# t.left.right = TreeNode(5)
+# print t.levelorder()
 
 
 """
@@ -181,32 +236,3 @@ class Stack:
 # s.pop()
 # print s
 
-"""
-Queue stuff
-"""
-class Queue:
-    def __init__(self):
-        self.items = []
-
-    def is_empty(self):
-        return self.items == []
-
-    def enqueue(self, data):
-        self.items.append(data)
-
-    def dequeue(self):
-        return self.items.pop(0)
-
-    def size(self):
-        return len(self.items)
-
-    def __str__(self):
-        return str(self.items)
-
-# s = Queue()
-# s.enqueue(1)
-# s.enqueue(3)
-# s.enqueue(10)
-# print s
-# s.dequeue()
-# print s
