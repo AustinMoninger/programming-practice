@@ -44,13 +44,13 @@ def mergesort(arr):
 """
 Graph BFS
 """
-graph = {'A': ['B', 'C', 'E'],
-         'B': ['A','D', 'E'],
-         'C': ['A', 'F', 'G'],
-         'D': ['B'],
-         'E': ['A', 'B','D'],
-         'F': ['C'],
-         'G': ['C']}
+# graph = {'A': ['B', 'C', 'E'],
+#          'B': ['A','D', 'E'],
+#          'C': ['A', 'F', 'G'],
+#          'D': ['B'],
+#          'E': ['A', 'B','D'],
+#          'F': ['C'],
+#          'G': ['C']}
 
 def bfs(graph, start):
     visited = []
@@ -67,8 +67,24 @@ def bfs(graph, start):
 
 # print bfs(graph, 'A')
 
+# graph = {1: [2, 3], 2: [4, 5],
+#                     3: [5], 4: [6], 5: [6],
+#                     6: [7], 7: []}
+
 def dfs(graph, start):
-    pass
+    visited = []
+    stack = [start]
+
+    while stack:
+        node = stack.pop()
+        if node not in visited:
+            visited.append(node)
+
+            for neighbor in graph[node]:
+                stack.append(neighbor)
+    return visited
+
+# print dfs(graph, 1)
 
 
 
