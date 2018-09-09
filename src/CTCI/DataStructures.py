@@ -1,3 +1,7 @@
+"""
+LinkedList stuff
+"""
+
 class LinkedNode:
     def __init__(self, val, next=None):
         self.val = val
@@ -90,8 +94,9 @@ class LinkedList:
         result += "]"
         return result
 
-
-
+"""
+Tree stuff
+"""
 class TreeNode:
     def __init__(self, data, left=None, right=None):
         self.data = data
@@ -120,15 +125,36 @@ class TreeNode:
         print self.data
 
 
+"""
+Graph stuff
+"""
+def get_edges(graph):
+    edge_list = []
+    for node in graph:
+        for other_node in graph[node]:
+            edge_list.append((node, other_node))
+    return edge_list
+
+def get_isolated_nodes(graph):
+    isolated_list = []
+    for node in graph:
+        if not graph[node]:
+            isolated_list.append(node)
+    return isolated_list
+
+# graph = {1: [2, 3],
+#          2: [1],
+#          3: [1, 4],
+#          4: [3],
+#          5: []}
 
 
 
-tree = TreeNode(1)
-tree.left = TreeNode(2)
-tree.right = TreeNode(3)
-tree.left.left = TreeNode(4)
-tree.left.right = TreeNode(5)
-tree.right.left = TreeNode(6)
-tree.right.right = TreeNode(7)
+"""
+Stack stuff
+"""
 
-tree.postorder()
+
+"""
+Queue stuff
+"""
