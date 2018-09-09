@@ -184,3 +184,29 @@ class Stack:
 """
 Queue stuff
 """
+class Queue:
+    def __init__(self):
+        self.items = []
+
+    def is_empty(self):
+        return self.items == []
+
+    def enqueue(self, data):
+        self.items.append(data)
+
+    def dequeue(self):
+        return self.items.pop(0)
+
+    def size(self):
+        return len(self.items)
+
+    def __str__(self):
+        return str(self.items)
+
+# s = Queue()
+# s.enqueue(1)
+# s.enqueue(3)
+# s.enqueue(10)
+# print s
+# s.dequeue()
+# print s
